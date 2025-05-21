@@ -52,9 +52,6 @@ export class MatrizesCurricularesController {
     description: "Matriz curricular criada com sucesso",
     type: MatrizCurricularResponseDto,
   })
-  @ApiResponse({ status: 400, description: "Requisição inválida" })
-  @ApiResponse({ status: 401, description: "Não autorizado" })
-  @ApiResponse({ status: 403, description: "Acesso proibido" })
   @Roles(PapelUsuario.COORDENADOR, PapelUsuario.ADMIN)
   @Post()
   create(
